@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Basic Website",
-    price: "700$",
+    price: "700",
     desc: "Perfect For Small Businesses",
     features: [
       "Custom modern website design",
@@ -23,7 +23,7 @@ const plans = [
   },
   {
     name: "E-commerce Store",
-    price: "1000$",
+    price: "1000",
     desc: "Best For Growing Business",
     features: [
       "Custom e-commerce website design",
@@ -42,7 +42,7 @@ const plans = [
   },
   {
     name: "EnterPrise Solution",
-    price: "1500$",
+    price: "1500",
     desc: "For Large Organization",
     features: [
       "Custom enterprise web applications",
@@ -62,7 +62,7 @@ const plans = [
   },
   {
     name: "SEO , AEO and GEO",
-    price: "250$/mo",
+    price: "250/mo",
     desc: "Perfect For Any Businesses",
     features: [
     "Keyword Research & Strategy",
@@ -119,7 +119,7 @@ export default function Pricing() {
               <div className="absolute inset-0 bg-linear-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none rounded-lg" />
               {plan.mostPopular && (
                 <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <div className="flex items-center space-x-1 px-3 sm:px-4 py-1 sm:py-1.5 bg-linear-to-r from-blue-500 to-cyan-500 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
+                  <div className="flex items-center space-x-1 whitespace-nowrap px-3 sm:px-4 py-1 sm:py-1.5 bg-linear-to-r from-blue-500 to-cyan-500 rounded-full text-xs sm:text-sm font-semibold shadow-lg">
                     <Star className="w-3 h-3 sm:w-3 sm:h-3 fill-white" />
                     <span>Most Popular</span>
                   </div>
