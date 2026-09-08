@@ -90,7 +90,7 @@ export default function ReadyToGetStarted() {
         <input
           type="email"
           placeholder="Your email address"
-          className="flex-1 w-full bg-black border border-white/20 rounded-lg px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-[#4c8c4a]"
+          className="flex-1 w-full bg-black border border-white/20 rounded-lg px-5 py-4 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-cyan-500"
         />
         <button className="whitespace-nowrap rounded-lg bg-blue-600 text-White font-bold px-6 py-4 hover:bg-blue-400 transition-colors">
           Subscribe for updates
