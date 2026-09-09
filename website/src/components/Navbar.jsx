@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import { X } from "lucide-react";
+import logo from "../assets/logo.png";
 const Navbar = ({ scrolled }) => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   return (
@@ -16,7 +17,7 @@ const Navbar = ({ scrolled }) => {
          <div className="flex items-center space-x-0 group cursor-pointer">
             <div>
              <img
-  src="/logo.png"
+  src={logo}
   alt="parabola logo"
   className="w-18 h-18 sm:w-18 sm:h-18 object-contain"
 />
@@ -34,7 +35,7 @@ const Navbar = ({ scrolled }) => {
               Home
             </a>
              <a
-              href="#Aboutus"
+              href="#About-us"
               className="text-gray-300 hover:text-white text-sm lg:text-base"
             >
               About Us
@@ -49,13 +50,19 @@ const Navbar = ({ scrolled }) => {
               href="#pricing"
               className="text-gray-300 hover:text-white text-sm lg:text-base"
             >
-              Pricing
+             Services
             </a>
             <a
               href="#testimonials"
               className="text-gray-300 hover:text-white text-sm lg:text-base"
             >
               Testimonials
+            </a>
+            <a
+              href="#Get-started"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
+              Careers
             </a>
           </div>
           <button
@@ -88,7 +95,7 @@ const Navbar = ({ scrolled }) => {
               onClick={() => setMobileMenuIsOpen(false)}
               className="block text-gray-300 hover:text-white text-sm lg:text-base"
             >
-              Pricing
+              Services
             </a>
             <a
               href="#testimonials"
@@ -96,6 +103,20 @@ const Navbar = ({ scrolled }) => {
               className="block text-gray-300 hover:text-white text-sm lg:text-base"
             >
               Testimonials
+            </a>
+            <a
+              href="#About-us"
+              onClick={() => setMobileMenuIsOpen(false)}
+              className="block text-gray-300 hover:text-white text-sm lg:text-base"
+            >
+              About Us
+            </a>
+              <a
+              href="#Get-started"
+              onClick={() => setMobileMenuIsOpen(false)}
+              className="block text-gray-300 hover:text-white text-sm lg:text-base"
+            >
+              Careers
             </a>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import logo from "../assets/logo.png";
 const footerLinks = {
   Product: ["Features", "Pricing", "Security", "Roadmap", "Changelog"],
   Company: ["About", "Blog", "Carrers", "Press", "Partners"],
@@ -21,7 +22,7 @@ export default function Footer() {
             <div className="flex items-center justify-center sm:justify-start space-x-2 mb-3 sm:mb-4">
               <div className="rounded-lg">
                 <img
-  src="/logo.png"
+  src={logo}
   alt="parabola logo"
   className="w-18 h-18 sm:w-18 sm:h-18 object-contain"
 />

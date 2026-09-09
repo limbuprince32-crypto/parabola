@@ -2,7 +2,9 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="bg-[#020617] text-white py-24 sm:py-28 lg:py-32">
+    <section 
+    id='About-us'
+    className="bg-[#020617] text-white py-24 sm:py-28 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}

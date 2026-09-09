@@ -45,7 +45,9 @@ export default function ReadyToGetStarted() {
   ];
 
   return (
-    <section className="w-full bg-slate/950 py-20 px-6">
+    <section 
+    id='Get-started'
+    className="w-full bg-slate/950 py-20 px-6">
       <h2 className="text-center text-5xl font-extrabold text-white tracking-tight mb-14">
         Ready to get started?
       </h2>
