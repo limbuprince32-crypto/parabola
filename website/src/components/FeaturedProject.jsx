@@ -12,7 +12,7 @@ export default function FeaturedProject() {
           See how we've helped businesses transform their digital presence
         </p>
       </div>
-      <div className="max-w-5xl mx-auto rounded-2xl bg-[#0b0f1a] border border-white/5 p-10">
+      <div className="max-w-5xl mx-auto rounded-2xl bg-slate-950 border border-cyan-900 p-10">
         <div className="flex items-start justify-between mb-6">
           <div>
             <h3 className="text-3xl font-bold text-white mb-3">
@@ -34,14 +34,13 @@ export default function FeaturedProject() {
     className="absolute inset-0 w-full h-full object-cover"
   />
   <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center px-6">
-    <h4 className="text-3xl font-bold text-white mb-5">
-      Professional Landscaping Services
+    <h4 className="text-3xl font-bold text-white -mt-10 mb-15">
+      Professional Pet Care Services.
     </h4>
-    <p className="text-slate-300 text-lg mb-8 max-w-xl">
-      Custom website design with service showcase, project gallery, and
-      contact forms
+    <p className="text-slate-300 tex-lg mt-9 mb-8 max-w-xl">
+      Custom website design .
     </p>
-    <button className="rounded-lg px-8 py-4 font-semibold text-white bg-gradient-to-br from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 transition-colors shadow-lg shadow-blue-900/30">
+    <button className="rounded-lg px-8 py-4 mt-10 font-semibold text-white bg-gradient-to-br from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 transition-colors shadow-lg shadow-blue-900/30">
       Learn More
     </button>
   </div>

@@ -40,7 +40,7 @@ export default function GetInTouch() {
         {cards.map(({ icon: Icon, title, lines, link }) => (
           <div
             key={title}
-            className="rounded-2xl bg-[#0b0f1a] border border-white/10 p-10 flex flex-col items-center text-center"
+            className="rounded-2xl bg-slate-950 border border-cyan-900 p-10 flex flex-col items-center text-center"
           >
             <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-6">
               <Icon size={26} className="text-black" />

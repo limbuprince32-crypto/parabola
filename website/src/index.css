@@ -1,24 +1,59 @@
 @import "tailwindcss";
 
 @layer utilities {
+  /* --- Base animation behavior --- */
   .animate-in {
     animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   }
+
+  /* --- Directional entrances --- */
   .slide-in-from-top {
     animation-name: slideInFromTop;
-  }
-  .duration-300 {
-    animation-duration: 300ms;
-  }
-  .duration-200 {
-    animation-duration: 200ms;
   }
   .slide-in-from-bottom {
     animation-name: slideInFromBottom;
   }
+  .slide-in-from-left {
+    animation-name: slideInFromLeft;
+  }
+  .slide-in-from-right {
+    animation-name: slideInFromRight;
+  }
+
+  /* --- Fade + scale entrances --- */
+  .fade-in {
+    animation-name: fadeIn;
+  }
+  .zoom-in {
+    animation-name: zoomIn;
+  }
+  .zoom-in-bounce {
+    animation-name: zoomInBounce;
+    animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* --- Durations --- */
+  .duration-150 {
+    animation-duration: 150ms;
+  }
+  .duration-200 {
+    animation-duration: 200ms;
+  }
+  .duration-300 {
+    animation-duration: 300ms;
+  }
+  .duration-500 {
+    animation-duration: 500ms;
+  }
   .duration-700 {
     animation-duration: 700ms;
   }
+  .duration-1000 {
+    animation-duration: 1000ms;
+  }
+
+  /* --- Delays --- */
   .delay-100 {
     animation-delay: 100ms;
   }
@@ -26,14 +61,32 @@
     animation-delay: 200ms;
   }
   .delay-300 {
-    animate-delay: 300ms;
+    animation-delay: 300ms;
+  }
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+
+  /* --- Subtle continuous motion (great for hero/CTA accents) --- */
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulseGlow 2.5s ease-in-out infinite;
   }
 }
 
+/* --- Keyframes --- */
 @keyframes slideInFromTop {
   from {
     opacity: 0;
-    transform: translateY(-1rem);
+    transform: translateY(-1.25rem);
   }
   to {
     opacity: 1;
@@ -41,13 +94,90 @@
   }
 }
 
-keyframes slideInFromBottom {
+@keyframes slideInFromBottom {
   from {
     opacity: 0;
-    transform: translateY(-1rem);
+    transform: translateY(1.25rem);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomInBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(99, 102, 241, 0);
   }
 }
