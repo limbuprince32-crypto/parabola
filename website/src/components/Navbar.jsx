@@ -44,7 +44,7 @@ const Navbar = ({ scrolled }) => {
               href="#features"
               className="text-gray-300 hover:text-white text-sm lg:text-base"
             >
-              Features
+              Projects
             </a>
             <a
               href="#pricing"
@@ -63,6 +63,12 @@ const Navbar = ({ scrolled }) => {
               className="text-gray-300 hover:text-white text-sm lg:text-base"
             >
               Careers
+            </a>
+             <a
+              href="/"
+              className="text-gray-300 hover:text-white text-sm lg:text-base"
+            >
+              Contact
             </a>
           </div>
           <button

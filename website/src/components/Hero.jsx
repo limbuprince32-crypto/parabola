@@ -6,9 +6,11 @@ import { Play } from "lucide-react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { codeExamples, floatingCards } from "../data/CodeExample";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [activeTab, setActiveTab] = useState("App.jsx");
+
   useEffect(() => {
     function handleMouseMove(e) {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -17,7 +19,9 @@ const Hero = () => {
 
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
   const currentFloatingCard = floatingCards[activeTab];
+
   return (
     <section
       className="relative min-h-screen flex items-center justify-center pt-16 
@@ -30,9 +34,9 @@ const Hero = () => {
           rgba(59, 130, 246, 0.15), transparent 40%)`,
         }}
       />
-      <div className="max-w-7xl mx-auto text-center relative-full">
+      <div className="max-w-7xl mx-auto text-center w-full">
         <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-2 text-center lg:text-left gap-6 sm:gap-8 lg:gap-12 items-center relative">
-          <div>
+          <div className="w-full min-w-0">
             <div
               className="inline-flex items-center space-x-2 px-3 sm:px-4 py-2 bg-blue-500/10 border border-blue-500/20 
             rounded-full mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700"
@@ -43,9 +47,9 @@ const Hero = () => {
               </span>
             </div>
 
-            <h1 className="text-5xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold mb-4 sm:mb-6 animate-in slide-in-from-bottom duration-700 delay-100 leading-tight break-words">
               <span className="bg-linear-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent block mb-1 sm:mb-2">
-               Yor Vision
+                Your Vision
               </span>
               <span className="bg-linear-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent block mb-1 sm:mb-2">
                 Our Technology
@@ -54,62 +58,62 @@ const Hero = () => {
                 Limitless Possibilities
               </span>
             </h1>
-            <p className="text-md sm:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8 animate-in slide-in-from-bottom duration-700 delay-200 leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8 animate-in slide-in-from-bottom duration-700 delay-200 leading-relaxed">
               At ParaBola Technology, we turn ambitious ideas into meaningful digital experiences and powerful technology solutions. We bring together creativity, innovation, strategy, and cutting-edge technology to solve complex challenges and create solutions that make a real difference. Whether you're launching a new idea, transforming an existing business, or looking for smarter ways to grow, ParaBola is your partner in turning vision into reality. We don't just follow the future — we build it.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-in slide-in-from-bottom duration-700 delay-300">
               <button
-                className="group w-full sm:w-auto px-6 ms:px-8 py-3 sm:py-4 bg-linear-to-b from-blue-600 to-blue-400 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-102 
+                className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-linear-to-b from-blue-600 to-blue-400 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-[1.02] 
               flex items-center justify-center gap-x-2"
               >
-                <span> Explore Us</span>
+                <span>Explore Us</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               <button
-                className="group w-full sm:w-auto px-6 ms:px-8 py-3 sm:py-4 bg-white/5 backdrop-blur-sm border-white/10 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 hover:bg-white/10 
+                className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 hover:bg-white/10 
               flex items-center justify-center gap-x-2"
               >
                 <span>Learn More</span>
               </button>
             </div>
           </div>
-          <div className="relative order-2 w-full ">
+          <div className="relative order-2 w-full min-w-0">
             <div className="relative bg-white/5 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl border border-white/10">
-              <div className="bg-linear-to-r from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden h-[208px] lg:h-[450px] border border-white/5">
+              <div className="bg-linear-to-r from-gray-900/20 to-gray-800/20 backdrop-blur-sm rounded-lg overflow-hidden h-[300px] sm:h-[340px] lg:h-[450px] border border-white/5">
                 {/* ide header */}
                 <div
                   className="flex items-center justify-between px-3 sm:px-4 py-2 
             sm:py-3 bg-white/5 backdrop-blur-sm border-b border-white/10"
                 >
-                  <div className="flex items-center space-x-2">
-                    <div className="flex items-center space-x-1 sm:space-x-2">
+                  <div className="flex items-center space-x-2 min-w-0">
+                    <div className="flex items-center space-x-1 sm:space-x-2 shrink-0">
                       <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500" />
                       <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
                       <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500" />
                     </div>
-                    <span className="text-xs sm:text-sm text-gray-300">
+                    <span className="text-xs sm:text-sm text-gray-300 truncate">
                       Your Vision.ParaBola
                     </span>
                   </div>
-                  <ChevronDown className="w-3 h-3 sm:h-4 sm:w-4 text-gray-400" />
+                  <ChevronDown className="w-3 h-3 sm:h-4 sm:w-4 text-gray-400 shrink-0" />
                 </div>
-                <div className="p-3 relative h-full">
+                <div className="p-3 relative h-full flex flex-col">
                   {/*file tabs */}
-                  <div className="flex space-x-1 sm:space-x-2 mb-3 sm:mb-4 overflow-x-auto">
+                  <div className="flex space-x-1 sm:space-x-2 mb-3 sm:mb-4 overflow-x-auto shrink-0">
                     <button
                       onClick={() => setActiveTab("App.jsx")}
-                      className={`px-3 py-2 backdrop-blur-sm text-xs sm:text-sm rounded-t-lg border ${
+                      className={`px-3 py-2 backdrop-blur-sm text-xs sm:text-sm rounded-t-lg border shrink-0 ${
                         activeTab === "App.jsx"
                           ? "bg-blue-500/30 text-white border-blue-400/20"
                           : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10"
                       }
-                   text-gray-300 transition-all duration-200 whitespace-nowwrap`}
+                   text-gray-300 transition-all duration-200 whitespace-nowrap`}
                     >
                       Vision.jsx
                     </button>
                     <button
                       onClick={() => setActiveTab("Hero.jsx")}
-                      className={`px-3 py-2 backdrop-blur-sm text-xs sm:text-sm rounded-t-lg border ${
+                      className={`px-3 py-2 backdrop-blur-sm text-xs sm:text-sm rounded-t-lg border shrink-0 ${
                         activeTab === "Hero.jsx"
                           ? "bg-blue-500/30 text-white border-blue-400/20"
                           : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10"
@@ -120,18 +124,18 @@ const Hero = () => {
                     </button>
                     <button
                       onClick={() => setActiveTab("Navbar.jsx")}
-                      className={`px-3 py-2 backdrop-blur-sm text-xs sm:text-sm rounded-t-lg border ${
+                      className={`px-3 py-2 backdrop-blur-sm text-xs sm:text-sm rounded-t-lg border shrink-0 ${
                         activeTab === "Navbar.jsx"
                           ? "bg-blue-500/30 text-white border-blue-400/20"
                           : "bg-white/5 text-gray-300 border-white/10 hover:bg-white/10"
                       }
-                   text-gray-300 transition-all duration-200 whitespace-nowwrap`}
+                   text-gray-300 transition-all duration-200 whitespace-nowrap`}
                     >
                       Innovation.jsx
                     </button>
                   </div>
                   {/*code content */}
-                  <div className="relative overflow-hidden grow">
+                  <div className="relative overflow-auto grow min-h-0">
                     <SyntaxHighlighter
                       language="javascript"
                       style={nightOwl}
@@ -180,4 +184,5 @@ const Hero = () => {
     </section>
   );
 };
+
 export default Hero;

@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 const footerLinks = {
   Product: ["Features", "Pricing", "Security", "Roadmap", "Changelog"],
   Company: ["About", "Blog", "Carrers", "Press", "Partners"],
-  Workwithus: ["Contact", "Careers", "Consulting", "Training", "Events"],
+  "Work with us": ["Contact", "Careers", "Consulting", "Training", "Events"],
   Resources: [
     "Documentation",
     "Help Center",
